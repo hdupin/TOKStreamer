@@ -4,6 +4,7 @@ class CreateStreams < ActiveRecord::Migration
       t.string :title
       t.text :desc
       t.string :status
+      t.integer :session_id
 
       t.timestamps null: false
     end
