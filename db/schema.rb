@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160408072218) do
     t.string   "title"
     t.text     "desc"
     t.string   "status"
-    t.integer  "session_id"
+    t.string   "session_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
