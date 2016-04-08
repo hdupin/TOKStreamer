@@ -29,6 +29,7 @@ gem 'thin'
 gem 'opentok'
 gem 'figaro'
 gem 'gon'
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
