@@ -122,9 +122,6 @@ GEM
       addressable (~> 2.3)
       httparty (~> 0.13.1)
     orm_adapter (0.5.0)
-    passenger (5.0.27)
-      rack
-      rake (>= 0.8.1)
     pg (0.18.4)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -240,7 +237,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   opentok
-  passenger
   pg
   rails (= 4.2.6)
   rspec-rails
