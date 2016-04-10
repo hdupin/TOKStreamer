@@ -58,7 +58,7 @@ class StreamsController < ApplicationController
   end
 
   def stream_role_for_user(stream:, user:)
-    user&.id == stream.user_id ? :publisher : :subscriber
+    user && user.id == stream.user_id ? :publisher : :subscriber
   end
 
 end
