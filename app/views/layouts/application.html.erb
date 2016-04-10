@@ -9,6 +9,17 @@
 </head>
 <body>
 
+
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+  <div class="container">
+    <a class="navbar-brand" href="<%=root_path%>">Streamer</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="<%= streams_path %>">Streams <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <div class="container">
   <%= flash_messages %>
 
