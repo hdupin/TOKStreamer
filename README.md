@@ -1,3 +1,4 @@
+[![Build Status](https://semaphoreci.com/api/v1/bitofuniverse/tokstreamer/branches/master/badge.svg)](https://semaphoreci.com/bitofuniverse/tokstreamer)
 [![Code Climate](https://codeclimate.com/repos/57093f99b554fd008200127d/badges/bc53241c8b5e1d5ebf37/gpa.svg)](https://codeclimate.com/repos/57093f99b554fd008200127d/feed)
 [![Coverage Status](https://coveralls.io/repos/github/BitOfUniverse/TOKStreamer/badge.svg?branch=master)](https://coveralls.io/github/BitOfUniverse/TOKStreamer?branch=master)
 
