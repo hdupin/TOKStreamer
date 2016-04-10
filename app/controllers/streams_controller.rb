@@ -5,7 +5,9 @@ class StreamsController < ApplicationController
   end
 
   def new
-
+    if current_user && current_user.stream
+      redirect_to current_user.stream
+    end
   end
 
   def show
@@ -31,9 +33,9 @@ class StreamsController < ApplicationController
 
   def stream
     @stream ||= if params[:id]
-                  (current_user ? current_user.streams : Stream).find(params[:id])
+                  Stream.find(params[:id])
                 else
-                  current_user.streams.new(stream_params)
+                  current_user.build_stream(stream_params)
                 end
   end
   helper_method :stream
