@@ -7,6 +7,9 @@ class StreamsController < ApplicationController
   def new
     if current_user && current_user.stream
       redirect_to current_user.stream
+    else
+      create_stream_with_tok_session_service
+      redirect_to stream, notice: 'Nice! You are ready to start a stream!'
     end
   end
 
@@ -26,6 +29,7 @@ class StreamsController < ApplicationController
   private
 
   def create_stream_with_tok_session_service
+    stream.title = "#{current_user.email.split('@').first}'s stream"
     session = OpenTokClient.create_session
     stream.session_id = session.session_id
     stream.save
