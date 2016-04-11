@@ -2,8 +2,16 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+viewersCount = 0
+
+updateViewersCount = (change)->
+  viewersCount += change
+  $('#viewers').text(viewersCount)
+
 $(document).on 'ready page:load', ->
   return unless window.gon
+
+  console.log("Init Stream")
   # get session id somehow
   console.log(gon.opentok)
 
@@ -43,6 +51,12 @@ $(document).on 'ready page:load', ->
       # Subscribe to the stream that caused this event, put it inside the container we just made
       console.log('Start subscribing to the video')
       session.subscribe(event.stream, subContainer, videoOptions);
+
+    connectionCreated: (event)->
+      updateViewersCount(+1)
+
+    connectionDestroyed: (event)->
+      updateViewersCount(-1)
 
 
     # Connect to the Session using the 'apiKey' of the application and a 'token' for permission
